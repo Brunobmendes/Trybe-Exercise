@@ -1,0 +1,24 @@
+h1, p{
+    text-align: center;
+
+}
+
+.ordened-list :hover{
+    background-color: red;
+    color: white;
+    
+}
+
+.orderned-list :active{
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+.ordened-list{
+    text-decoration: none;
+    color: black
+}
+
+.unordened-list, .ordened-list{
+    list-style: none;
+}
