@@ -1,0 +1,61 @@
+ol{
+    background-color: yellow;
+
+}
+ol .pair{
+    color: green;
+
+}
+ol .odd{
+    text-transform: uppercase;
+
+}
+.header{
+    color: red;
+
+}
+
+.header em{
+    font-size: 40px;
+    border: 1px black solid;
+
+}
+
+li{
+    font: 20px;
+
+}
+
+li em{
+    font-weight: bold;
+
+}
+
+.language{
+    color: blue;
+}
+
+.language.java{
+    background-color: pink;
+}
+
+.tools:hover{
+    font-weight: bold;
+
+}
+.tools.stackoverflow:hover{
+    color: orange;
+}
+.tools.w3schools:hover{
+    color: green;
+}
+.tools.mdn:hover{
+    color: black;
+}
+.tools.devdocs:hover{
+    color: yellow;
+}
+.tools.trybe:hover{
+    color: green;
+}
+
