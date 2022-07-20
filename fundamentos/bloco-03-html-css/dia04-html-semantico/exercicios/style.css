@@ -1,0 +1,30 @@
+.referencias{
+
+
+}
+.content{
+    width: 60%;
+}
+h2{
+    text-align: center;
+    width: 60%;
+}
+
+nav li{
+    display: inline-block;
+    margin: 1%;
+}
+
+.referencias{
+    position: relative;
+    left: 65%;
+    top: 80px;
+    color:black;
+    background-color: #B4C0D9;
+    border: black solid 1px;
+    width: 30%;
+}
+.referencias h4{
+    text-align: center;
+
+}
