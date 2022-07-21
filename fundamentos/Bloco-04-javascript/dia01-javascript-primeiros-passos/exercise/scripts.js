@@ -67,3 +67,16 @@ if (aValue > bValue){ //valor de A é maior que B?
     console.log(cValue + " é maior")
   }
 }
+console.log("")
+//exercicio 04: Faça um programa que, dado um valor definido numa constante, retorne "positive" se esse valor for positivo, "negative" se for negativo e "zero" caso contrário.
+console.log("é positivo?")
+if(aValue > 0){
+  console.log("positive")
+}else if(aValue === 0){
+  console.log("o valor é zero")
+}else if(aValue < 0){
+  console.log("negative")
+}
+console.log("")
+//exercicios 05: 🚀 Faça um programa que defina três constantes com os valores dos três ângulos internos de um triângulo. Retorne true se os ângulos representarem os ângulos de um triângulo e false, caso contrário. Se algum ângulo for inválido o programa deve retornar uma mensagem de erro.
+
