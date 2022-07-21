@@ -5,3 +5,4 @@ console.log (myName, birthCity, birthYear);
 birthYear = 2030;
 console.log (birthYear);
 birthCity = "Araucaria";
+console.log (birthCity);
