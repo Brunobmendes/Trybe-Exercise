@@ -9,7 +9,18 @@ console.log("");
 
 //exercise 2: Para o segundo exercício, some todos os valores contidos no array e imprima o resultado;
 console.log("exercise 2:");
+let soma;
 for (let index = 0; index < numbers.length; index++) {
-  const soma =+ numbers[index]; 
+  soma =+ numbers[index];
+   
 }
+console.log("soma:"+ soma)
+console.log("")
+//exercise 3: Para o terceiro exercício, calcule e imprima a média aritmética dos valores contidos no array;
+console.log("exercise 3:");
+const media = soma / numbers.length;
+console.log("media:" + media);
+console.log("")
 
+//exercise 4:
+console.log("exercise 4:");
