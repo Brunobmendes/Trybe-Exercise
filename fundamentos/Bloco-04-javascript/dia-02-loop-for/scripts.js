@@ -22,5 +22,25 @@ const media = soma / numbers.length;
 console.log("media:" + media);
 console.log("")
 
-//exercise 4:
+//exercise 4: Com o mesmo código do exercício anterior, caso o valor final seja maior que 20, imprima a mensagem: "valor maior que 20". Caso não seja, imprima a mensagem: "valor menor ou igual a 20";
 console.log("exercise 4:");
+if (media >20){
+  console.log("media maior do que 20")
+}else{
+  console.log("valor menor ou igual a 20")
+}
+
+console.log("");
+
+//exercise 5: Utilizando for, descubra qual o maior valor contido no array e imprima-o;
+console.log("exercise 5:");
+let maiorNumber = 0;
+for (let index = 0; index < numbers.length; index++) {
+  if(numbers[index] > maiorNumber){
+    maiorNumber = numbers[index];
+  }  
+}
+console.log(maiorNumber);
+console.log("");
+
+
