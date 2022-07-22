@@ -71,17 +71,17 @@ console.log(menorNumber);
 console.log("");
 
 //exercise 8: Utilizando for, crie um array que vá de 1 até 25 e imprima o resultado;
-console.log("exercise 8:")
+console.log("exercise 8:");
 let arrayCriado = [];
 for (let index = 1; index <= 25; index++) {
-    arrayCriado.push(index);
+  arrayCriado.push(index);
 }
 console.log(arrayCriado);
 
 //exercise 9: Utilizando o array criado no exercício anterior imprima o resultado da divisão de cada um dos elementos por 2.
-console.log("exercise 9:")
-let arrayDividado = []
+console.log("exercise 9:");
+let arrayDividado = [];
 for (let index = 0; index < 25; index++) {
-    arrayDividado.push(arrayCriado[index]/2);
+  arrayDividado.push(arrayCriado[index] / 2);
 }
-console.log(arrayDividado)
+console.log(arrayDividado);
