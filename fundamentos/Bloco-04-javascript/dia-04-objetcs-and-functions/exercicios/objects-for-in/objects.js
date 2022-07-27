@@ -49,31 +49,40 @@ console.log("");
 //exercicio 06:
 console.log("exercicio 6: ");
 let leitor = {
-  nome: 'Julia',
-  sobrenome: 'Pessoa',
+  nome: "Julia",
+  sobrenome: "Pessoa",
   idade: 21,
   livrosFavoritos: [
     {
-      titulo: 'O Pior Dia de Todos',
-      autor: 'Daniela Kopsch',
-      editora: 'Tordesilhas',
+      titulo: "O Pior Dia de Todos",
+      autor: "Daniela Kopsch",
+      editora: "Tordesilhas",
     },
   ],
 };
 
-console.log("O livro favorito de " + leitor.nome +" "+ leitor.sobrenome + " se chama " + leitor.livrosFavoritos[0].titulo)
+console.log(
+  "O livro favorito de " +
+    leitor.nome +
+    " " +
+    leitor.sobrenome +
+    " se chama " +
+    leitor.livrosFavoritos[0].titulo
+);
 
 console.log("");
 
 //exercicio 07:
 console.log("exercicio 7: ");
 leitor.livrosFavoritos[1] = {
-  titulo: 'Harry Potter e o Prisioneiro de Azkaban',
-  autor: 'JK Rowling',
-  editora: 'Rocco',
+  titulo: "Harry Potter e o Prisioneiro de Azkaban",
+  autor: "JK Rowling",
+  editora: "Rocco",
 };
 console.log("");
 
 ////exercicio 08:
 console.log("exercicio 8: ");
-console.log(leitor.nome + " tem " + leitor.livrosFavoritos.length + " livros favoritos.")
+console.log(
+  leitor.nome + " tem " + leitor.livrosFavoritos.length + " livros favoritos."
+);
