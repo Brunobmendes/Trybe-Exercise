@@ -59,7 +59,7 @@
     <script>
       //criando elementos e adicionando texto
       const titleH1 = document.createElement("h1");
-      titleH1.className = "title"
+      titleH1.className = "title";
       titleH1.innerText = "Exercício 5.2 - JavaScript DOM";
 
       const pTag = document.createElement("p");
@@ -71,58 +71,60 @@
 
       const sectionTag = document.createElement("section");
       sectionTag.className = "center-content";
-      
+
       const sectionTagLeftContent = document.createElement("section");
       sectionTagLeftContent.className = "left-content";
 
       const sectionTagRightContent = document.createElement("section");
       sectionTagRightContent.className = "right-content";
 
-      const imageTag = document.createElement("img")
+      const imageTag = document.createElement("img");
       imageTag.src = "https://picsum.photos/200";
-      imageTag.className = "small-image"
+      imageTag.className = "small-image";
 
       //lista não ordenada
-      let unorderedList = document.createElement("ul")
-      unorderedList.className = "unordered-list"
+      let unorderedList = document.createElement("ul");
+      unorderedList.className = "unordered-list";
       let listString = {
-        1: 'um',
-        2: 'dois',
-        3: 'tres',
-        4: 'quatro',
-        5: 'cinco',
-        6: 'seis',
-        7: 'sete',
-        8: 'oito',
-        9: 'nove',
-        10: 'dez',
-      }
-      
+        1: "um",
+        2: "dois",
+        3: "tres",
+        4: "quatro",
+        5: "cinco",
+        6: "seis",
+        7: "sete",
+        8: "oito",
+        9: "nove",
+        10: "dez",
+      };
+
       function addElementToParent(elementCreated, parentAttached) {
         //adiciona um elemento criado a um parente
         const parentName = document.querySelector(parentAttached);
         parentName.appendChild(elementCreated);
       }
-    
-      addElementToParent(titleH1, "body");
-      addElementToParent(mainTag, "body");
-      addElementToParent(sectionTag, ".main-content");
-      addElementToParent(pTag, ".center-content");
-      addElementToParent(sectionTagLeftContent, ".main-content");
-      addElementToParent(sectionTagRightContent, ".main-content");
-      addElementToParent(imageTag, ".left-content"); 
-      addElementToParent(unorderedList, '.right-content')
 
-      for(let index = 1; index <= 10; index++){
-        let list = document.createElement("li")
-        list.innerText = listString[index]
-        addElementToParent(list, ".unordered-list")
-      }
-      for(let index = 1; index <= 3; index++){
-        let titleH3= document.createElement("h3")
-        addElementToParent(titleH3, ".main-content")
+      addElementToParent(titleH1, "body"); //add to body
+      addElementToParent(mainTag, "body"); //add to body
+      addElementToParent(sectionTag, ".main-content"); //add to main Tag
+      addElementToParent(pTag, ".center-content"); //add to first section tag
+      addElementToParent(sectionTagLeftContent, ".main-content"); //add to main Tag
+      addElementToParent(sectionTagRightContent, ".main-content"); //add to main Tag
+      addElementToParent(imageTag, ".left-content"); //add to second section content
+      addElementToParent(unorderedList, ".right-content"); //add to third section content
+
+      for (let index = 1; index <= 10; index++) {
+        let list = document.createElement("li");
+        list.innerText = listString[index];
+        addElementToParent(list, ".unordered-list");
       }
 
+      for (let index = 1; index <= 3; index++) {
+        let titleH3 = document.createElement("h3");
+        titleH3.className = "description";
+        addElementToParent(titleH3, ".main-content");
+      }
+      mainTag.removeChild(document.querySelector(".left-content")) //remove o left content
     </script>
   </body>
 </html>
