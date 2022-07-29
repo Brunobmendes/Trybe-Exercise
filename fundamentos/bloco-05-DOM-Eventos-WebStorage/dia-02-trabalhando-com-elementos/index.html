@@ -57,6 +57,21 @@
   </head>
   <body>
     <script>
+      //exercise 01:
+      const titleH1 = document.createElement("h1");
+      titleH1.innerText = "Exercício 5.2 - JavaScript DOM";
+
+      const mainTag = document.createElement("main");
+      mainTag.className = "main-content";
+      
+      function addElementToParent(elementCreated, parentAttached) {
+        let parentName = document.querySelector(parentAttached);
+        parentName.appendChild(elementCreated);
+      }
+
+      addElementToParent(titleH1, "body");
+      addElementToParent(mainTag, "body");
+
       
     </script>
   </body>
