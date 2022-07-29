@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      //criando elementos e adicionando texto
+      const titleH1 = document.createElement("h1");
+      titleH1.className = "title";
+      titleH1.innerText = "Exercício 5.2 - JavaScript DOM";
+
+      const pTag = document.createElement("p");
+      pTag.innerText = "Algum Texto";
+
+      //criando elementos e adicionando classes
+      const mainTag = document.createElement("main");
+      mainTag.className = "main-content";
+
+      const sectionTag = document.createElement("section");
+      sectionTag.className = "center-content";
+
+      const sectionTagLeftContent = document.createElement("section");
+      sectionTagLeftContent.className = "left-content";
+
+      const sectionTagRightContent = document.createElement("section");
+      sectionTagRightContent.className = "right-content";
+
+      const imageTag = document.createElement("img");
+      imageTag.src = "https://picsum.photos/200";
+      imageTag.className = "small-image";
+
+      //lista não ordenada
+      let unorderedList = document.createElement("ul");
+      unorderedList.className = "unordered-list";
+      let listString = {
+        1: "um",
+        2: "dois",
+        3: "tres",
+        4: "quatro",
+        5: "cinco",
+        6: "seis",
+        7: "sete",
+        8: "oito",
+        9: "nove",
+        10: "dez",
+      };
+
+      function addElementToParent(elementCreated, parentAttached) {
+        //adiciona um elemento criado a um parente
+        const parentName = document.querySelector(parentAttached);
+        parentName.appendChild(elementCreated);
+      }
+
+      addElementToParent(titleH1, "body"); //add to body
+      addElementToParent(mainTag, "body"); //add to body
+      addElementToParent(sectionTag, ".main-content"); //add to main Tag
+      addElementToParent(pTag, ".center-content"); //add to first section tag
+      addElementToParent(sectionTagLeftContent, ".main-content"); //add to main Tag
+      addElementToParent(sectionTagRightContent, ".main-content"); //add to main Tag
+      addElementToParent(imageTag, ".left-content"); //add to second section content
+      addElementToParent(unorderedList, ".right-content"); //add to third section content
+
+      for (let index = 1; index <= 10; index++) {
+        let list = document.createElement("li");
+        list.className = listString[index];
+        list.innerText = listString[index];
+        addElementToParent(list, ".unordered-list");
+      }
+
+      for (let index = 1; index <= 3; index++) {
+        let titleH3 = document.createElement("h3");
+        titleH3.className = "description";
+        addElementToParent(titleH3, ".main-content");
+      }
+      mainTag.removeChild(document.querySelector(".left-content")); //remove left content
+      document.querySelector(".right-content").style = "margin-right: auto"; //align right content to center
+      document.querySelector(".center-content").style =
+        "background-color: green";
+
+      let listArray = document.querySelector("ul").children;
+      document.querySelector("ul").removeChild(listArray[listArray.length - 1]); //remove last li
+      document.querySelector("ul").removeChild(listArray[listArray.length - 1]); //remove last li
+    </script>
+  </body>
+</html>
