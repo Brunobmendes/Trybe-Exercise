@@ -59,6 +59,7 @@
     <script>
       //criando elementos e adicionando texto
       const titleH1 = document.createElement("h1");
+      titleH1.className = "title"
       titleH1.innerText = "Exercício 5.2 - JavaScript DOM";
 
       const pTag = document.createElement("p");
@@ -117,7 +118,11 @@
         list.innerText = listString[index]
         addElementToParent(list, ".unordered-list")
       }
-      
+      for(let index = 1; index <= 3; index++){
+        let titleH3= document.createElement("h3")
+        addElementToParent(titleH3, ".main-content")
+      }
+
     </script>
   </body>
 </html>
