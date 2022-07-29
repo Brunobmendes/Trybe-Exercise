@@ -115,6 +115,7 @@
 
       for (let index = 1; index <= 10; index++) {
         let list = document.createElement("li");
+        list.className = listString[index];
         list.innerText = listString[index];
         addElementToParent(list, ".unordered-list");
       }
@@ -124,7 +125,14 @@
         titleH3.className = "description";
         addElementToParent(titleH3, ".main-content");
       }
-      mainTag.removeChild(document.querySelector(".left-content")) //remove o left content
+      mainTag.removeChild(document.querySelector(".left-content")); //remove left content
+      document.querySelector(".right-content").style = "margin-right: auto"; //align right content to center
+      document.querySelector(".center-content").style =
+        "background-color: green";
+
+      let listArray = document.querySelector("ul").children;
+      document.querySelector("ul").removeChild(listArray[listArray.length - 1]); //remove last li
+      document.querySelector("ul").removeChild(listArray[listArray.length - 1]); //remove last li
     </script>
   </body>
 </html>
