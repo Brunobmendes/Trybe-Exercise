@@ -5,7 +5,7 @@ const cValue = -45;
 console.log("o valor de A é: " + aValue);
 console.log("o valor de B é: " + bValue);
 console.log("");
-//exercicio 1: faça cinco programas, um com cada operação aritm
+//exercício 1: faça cinco programas, um com cada operação aritm
 const calcType = "subtração"; //mudando para Soma, subtração, divisão, multiplicação, divisão, modulo
 console.log("calculo:");
 
