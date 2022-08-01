@@ -1,5 +1,3 @@
-
-
 function createDaysOfTheWeek() {
   const weekDays = [
     "Domingo",
@@ -58,7 +56,7 @@ function verifyHoliday(dia, classeCriada) {
   //verifica se o dia é feriado e adiciona uma classe a ele
   for (const valor of specialDays.holiday) {
     if (dia === valor) {
-      classeCriada.className += "holiday";
+      classeCriada.className = "holiday";
     }
   }
 }
@@ -66,7 +64,7 @@ function verifyFriday(dia, classeCriada) {
   //verifica se o dia é sexta e adiciona uma classe a ele
   for (const valor of specialDays.friday) {
     if (dia === valor && dia !== 25) {
-      classeCriada.className += "friday";
+      classeCriada.className = " friday";
     }
   }
 }
@@ -76,13 +74,29 @@ function verifySpecialDay(dia, classeCriada) {
   verifyFriday(dia, classeCriada);
 }
 
-function createButton(buttonName){
+function createButton(buttonName) {
   //cria um botão com o nome passado
-  buttonHoliday = document.createElement('button')
-  buttonHoliday.setAttribute('id', 'btn-holiday')
-  buttonHoliday.innerText += buttonName
-  addElementToParent(buttonHoliday, '.buttons-container')
-  
+  let buttonHoliday = document.createElement("button");
+  buttonHoliday.setAttribute("id", "btn-holiday");
+  buttonHoliday.innerText += buttonName;
+  addElementToParent(buttonHoliday, ".buttons-container");
+  corMudada("blue", "whitesmoke");
 }
 
-createButton('Feriados')
+function corMudada(colorChanged, colorOriginal) {
+  const buttonHoliday = document.querySelector("#btn-holiday");
+
+  buttonHoliday.addEventListener("click", function () {
+
+    const indexFeriado = document.getElementsByClassName("holiday");
+    for (let index = 0; index < indexFeriado.length; index++) {
+      if (indexFeriado[index].style.backgroundColor !== colorChanged) {
+        indexFeriado[index].style.backgroundColor = colorChanged;
+      } else {
+        indexFeriado[index].style.backgroundColor = colorOriginal;
+      }
+    }
+  });
+}
+
+createButton("Feriados");
