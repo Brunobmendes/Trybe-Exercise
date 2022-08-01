@@ -1,3 +1,5 @@
+
+
 function createDaysOfTheWeek() {
   const weekDays = [
     "Domingo",
@@ -22,6 +24,7 @@ function createDaysOfTheWeek() {
 createDaysOfTheWeek();
 
 // Escreva seu código abaixo.
+
 let decemberDaysList = [
   //dias do calendário
   29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
@@ -45,32 +48,41 @@ function addElementToParent(elementCreated, parentAttached) {
 for (let index = 0; index < decemberDaysList.length; index++) {
   //add all december days to calendar
   let createDays = document.createElement("li");
-  createDays.className = "day";
+  createDays.className += "day";
   createDays.innerText = decemberDaysList[index];
   addElementToParent(createDays, "#days");
-  verifySpecialDay(decemberDaysList[index], createDays)
+  verifySpecialDay(decemberDaysList[index], createDays);
 }
 
-function verifyHoliday(dia,classeCriada){
+function verifyHoliday(dia, classeCriada) {
   //verifica se o dia é feriado e adiciona uma classe a ele
   for (const valor of specialDays.holiday) {
-    if(dia === valor){
-      classeCriada.className = 'day holiday';
-    } 
+    if (dia === valor) {
+      classeCriada.className += "holiday";
+    }
   }
 }
-function verifyFriday(dia,classeCriada){
+function verifyFriday(dia, classeCriada) {
   //verifica se o dia é sexta e adiciona uma classe a ele
   for (const valor of specialDays.friday) {
-    if(dia === valor && dia !== 25){
-      classeCriada.className = 'day friday';
-    }else if(dia === 25){
-      classeCriada.className = 'day friday holiday';
-    } 
+    if (dia === valor && dia !== 25) {
+      classeCriada.className += "friday";
+    }
   }
 }
-function verifySpecialDay(dia, classeCriada){
+function verifySpecialDay(dia, classeCriada) {
   //reúne as duas verificações de classe
   verifyHoliday(dia, classeCriada);
-  verifyFriday(dia, classeCriada); 
+  verifyFriday(dia, classeCriada);
 }
+
+function createButton(buttonName){
+  //cria um botão com o nome passado
+  buttonHoliday = document.createElement('button')
+  buttonHoliday.setAttribute('id', 'btn-holiday')
+  buttonHoliday.innerText += buttonName
+  addElementToParent(buttonHoliday, '.buttons-container')
+  
+}
+
+createButton('Feriados')
