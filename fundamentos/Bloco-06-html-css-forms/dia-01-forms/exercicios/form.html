@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Formulário</title>
+  </head>
+  <body>
+    <header>Header da página</header>
+    <br />
+    <form action="" method="get">
+      <div id="">
+        <label for="userName">Nome: </label>
+        <input
+          type="text"
+          name="texto"
+          id="userName"
+          min="10"
+          max="40"
+          required
+        />
+        <br />
+        <br />
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" min="10" max="50" required />
+        <br />
+        <br />
+        <label for="destino">Destino Preferido:</label>
+        <br />
+        <input
+          type="radio"
+          name="checkbox"
+          class="destino"
+          value="Cidade"
+          required
+        />
+        <i>Cidade</i>
+        <input
+          type="radio"
+          name="checkbox"
+          class="destino"
+          value="Campo"
+          required
+        />
+        <i>Campo</i>
+        <input
+          type="radio"
+          name="checkbox"
+          class="destino"
+          value="Praia"
+          required
+        />
+        <i>Praia</i>
+        <input
+          type="radio"
+          name="checkbox"
+          class="destino"
+          value="Montanhas"
+          required
+        />
+        <i>Montanhas</i>
+        <br />
+        <br />
+        <label for="msg">
+          Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso
+          TrybeTrip?
+        </label>
+        <textarea
+          name="msg"
+          id=""
+          cols="70"
+          rows="18"
+          maxlength="500"
+          required
+        ></textarea>
+        <br />
+        <br />
+        <label for="data">Qual a melhor data para sua viagem?</label>
+        <br />
+        <input type="date" name="data" />
+        <br />
+        <label for="termo1">
+          Gostaria de receber outras incríveis oportunidades oferecidas pela
+          Trybe?
+        </label>
+        <input type="checkbox" name="termo1" />
+        <br />
+        <label for="termo2"></label>
+          Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.
+        </label>
+        <input type="checkbox" name="termo2" required />
+        <br />
+        <button type="submit">Enviar</button>
+        <button type="reset">Limpar</button>
+      </div>
+    </form>
+  </body>
+</html>
