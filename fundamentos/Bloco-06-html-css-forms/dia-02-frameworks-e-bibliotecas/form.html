@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="bootstrap.min.css" />
+  </head>
+  <body>
+    <header>Header da página</header>
+    <br />
+    <form action="" method="get">
+      <div class="form-group">
+        <label for="userName">Nome: </label>
+        <input
+          class="form-control"
+          type="text"
+          name="texto"
+          id="userName"
+          min="10"
+          max="40"
+          required
+        />
+        <br />
+        <br />
+        <label for="email">Email</label>
+        <input
+          class="form-control"
+          type="email"
+          name="email"
+          id="email"
+          min="10"
+          max="50"
+          required
+        />
+      </div>
+      <br />
+      <br />
+      <label for="destino">Destino Preferido:</label>
+      <br />
+      <input
+        type="radio"
+        name="checkbox"
+        class="form-check-input destino"
+        value="Cidade"
+        id="cidade"
+        required
+      />
+      <label class="form-check-label" for="cidade">Cidade</label>
+      <input
+        type="radio"
+        name="checkbox"
+        class="form-check-input destino"
+        value="Campo"
+        id="campo"
+        required
+      />
+      <label class="form-check-label" for="campo">Campo</label>
+      <input
+        type="radio"
+        name="checkbox"
+        class="form-check-input destino"
+        value="Praia"
+        id="praia"
+        required
+      />
+      <label class="form-check-label" for="praia">Praia</label>
+      <input
+        type="radio"
+        name="checkbox"
+        class="form-check-input destino"
+        value="Montanhas"
+        id="montanhas"
+        required
+      />
+      <label class="form-check-label" for="montanhas">Montanhas</label>
+      <br />
+      <br />
+      <label for="msg">
+        Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso
+        TrybeTrip?
+      </label>
+      <textarea
+        class="form-control"
+        name="msg"
+        id=""
+        rows="10"
+        maxlength="500"
+        required
+      ></textarea>
+      <br />
+      <br />
+      <label for="data">Qual a melhor data para sua viagem?</label>
+      <br />
+      <input class="" type="date" name="data" />
+      <br />
+      <label for="termo1">
+        Gostaria de receber outras incríveis oportunidades oferecidas pela
+        Trybe?
+      </label>
+      <input class="" type="checkbox" name="termo1" />
+      <br />
+      <label class="form-check-label" for="termo2"
+        >Concordo que imagens das minhas férias poderão ser usadas na divulgação
+        de concursos futuros.</label
+      >
+      <input class="form-check-input" type="checkbox" name="termo2" required />
+      <br />
+      <button class = 'btn btn-primary' type="submit">Enviar</button>
+      <button class = 'btn btn-danger' type="reset">Limpar</button>
+    </form>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
