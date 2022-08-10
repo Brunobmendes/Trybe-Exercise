@@ -66,7 +66,6 @@ function verifyFriday(dia, classeCriada) {
     if (dia === valor) {
       classeCriada.className += " friday";
     }
-
   }
 }
 function verifySpecialDay(dia, classeCriada) {
@@ -106,13 +105,13 @@ function createButtonFriday(buttonName) {
   buttonFriday.setAttribute("id", "btn-friday");
   buttonFriday.innerText += buttonName;
   addElementToParent(buttonFriday, ".buttons-container");
-  corMudadaFriday(buttonName, );
+  corMudadaFriday(buttonName);
 }
 
 function corMudadaFriday(textChanged, textOriginal) {
   //pega os parâmetros do text original e o text que vai mudar e altera o text quando o botão é apertado
   const buttonFriday = document.querySelector("#btn-friday");
-  
+
   buttonFriday.addEventListener("click", function () {
     //adiciona um evento de click ao botão da sexta que altera o inner text dele
     const indexSexta = document.getElementsByClassName("friday");
@@ -126,30 +125,66 @@ function corMudadaFriday(textChanged, textOriginal) {
   });
 }
 
-
 //funções para dar zoom
-function zoom(){
-  mouseIn()
-  mouseOut()
+function zoom() {
+  mouseIn();
+  mouseOut();
 }
-function mouseIn(){
-  let days = document.querySelector("#days")
-  days.addEventListener("mouseover", function(event){
-    event.target.style.fontSize = "30px"
-    event.target.style.fontSize = "300"
-  })
+function mouseIn() {
+  let days = document.querySelector("#days");
+  days.addEventListener("mouseover", function (event) {
+    event.target.style.fontSize = "30px";
+    event.target.style.fontSize = "300";
+  });
 }
-function mouseOut(){
-  let days = document.querySelector("#days")
-  days.addEventListener("mouseout", function(event){
-    event.target.style.fontSize = "20px"
-    event.target.style.fontSize = "200"
-  })
+function mouseOut() {
+  let days = document.querySelector("#days");
+  days.addEventListener("mouseout", function (event) {
+    event.target.style.fontSize = "20px";
+    event.target.style.fontSize = "200";
+  });
 }
 
-
+//tarefa Personalizada
+function task(task, color) {
+  let spanTask = document.createElement("span");
+  spanTask.innerText = task;
+  addElementToParent(spanTask, ".my-tasks");
+  label(color);
+}
+function label(color) {
+  corLegenda = document.createElement("div");
+  corLegenda.className = "task Selected";
+  addElementToParent(corLegenda, ".my-tasks");
+  corLegenda.style.backgroundColor = color;
+}
 
 createButtonHoliday("Feriados");
-createButtonFriday("Sextou")
-zoom()
+createButtonFriday("Sextou");
+zoom();
+task("estudar", "green");
 
+//making selected class in 'task' div
+
+function taskClass() {
+  let selectedTask = document.getElementsByClassName("task selected");
+  let myTask = document.querySelector(".task");
+
+  myTask.addEventListener("click", function (e) {
+    if (selectedTask.length === 0) {
+      e.target.className = "task selected";
+    } else {
+      e.target.className = "task";
+    }
+  });
+}
+
+function mouseChangeColor() {
+  const day = document.querySelector("#days");
+  day.addEventListener("mouseOver", function (event) {
+    event.target.style.color = "green";
+  });
+}
+
+mouseChangeColor();
+taskClass();
