@@ -69,21 +69,27 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [x] 7-1: _JavaScript ES6 - let, const, arrow functions e template literals_
 - [x] 7-2: _JavaScript ES6 - Objects_
 - [x] 7-3: _Testes unitários em JavaScript_
-- [ ] 7-4: _[Projeto - JavaScript Testes Unitários]()_
+- [x] 7-4: _[Projeto - JavaScript Testes Unitários]()_
 
 ##### Bloco 8: JavaScript ES6 :hourglass_flowing_sand:
 
 - [x] 8-1: _JavaScript ES6 - Higher Order Functions - forEach, find, some, every, sort_
-- [ ] 8-2: _JavaScript ES6 - Higher Order Functions - map e filter_
-- [ ] 8-3: _JavaScript ES6 - Higher Order Functions - reduce_
-- [ ] 8-4: _JavaScript ES6 - spread operator, rest parameter, destructuring e mais_
-- [ ] 8-5: _[Projeto - Zoo functions]()_
+- [x] 8-2: _JavaScript ES6 - Higher Order Functions - map e filter_
+- [x] 8-3: _JavaScript ES6 - Higher Order Functions - reduce_
+- [x] 8-4: _JavaScript ES6 - spread operator, rest parameter, destructuring e mais_
+- [x] 8-5: _[Projeto - Zoo functions]()_
 
 ## Desenvolvimento Front-end :hourglass_flowing_sand:
 
-##### Bloco 11: Introdução - React 
+##### Bloco 9: [JavaScript Assíncrono e Promises](https://github.com/paulohbsimoes/trybe-exercises/tree/master/01-fundamentos/bloco-09-javascript-assincrono-e-promises)
 
-- [ ] 11-1: _'Hello, world!' no React!_
+- [x] 9.1 - JavaScript Assíncrono e Callbacks
+- [x] 9.2 - JavaScript Promises
+- [x] 9.3 - Projeto - Carrinho de Compras
+
+##### Bloco 10: Introdução - React 
+
+- [] 11-1: _'Hello, world!' no React!_
 - [ ] 11-2: _Componentes React_
 - [ ] 11-3: _[Projeto - Movie Cards Library]()_
 
