@@ -85,13 +85,13 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 
 - [x] 9.1 - JavaScript Assíncrono e Callbacks
 - [x] 9.2 - JavaScript Promises
-- [x] 9.3 - Projeto - Carrinho de Compras
+- [x] 9.3 - [Projeto - Carrinho de Compras]()_
 
 ##### Bloco 10: Introdução - React 
 
-- [] 11-1: _'Hello, world!' no React!_
-- [ ] 11-2: _Componentes React_
-- [ ] 11-3: _[Projeto - Movie Cards Library]()_
+- [x] 11-1: _'Hello, world!' no React!_
+- [x] 11-2: _Componentes React_
+- [x] 11-3: _[Projeto - Solar System]()_
 
 ##### Bloco 12: React
 
